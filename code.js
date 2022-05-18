@@ -4,15 +4,47 @@ const selectReset = document.querySelector('#reset');
 const selectBlue = document.querySelector('#blue');
 const selectRed = document.querySelector('#red');
 const sketchPad = document.querySelector('#grid');
-const selectCreate = document.querySelector('#create');
+const selectSize = document.querySelector('#size');
 
-function addPixels(){
-    for(i=0; i < 256; i++){
+function addPixels(num){
+    total = num * num;
+
+    for(i=0; i < total; i++){
         let pixel = document.createElement('div');
         pixel.classList.add('pixel');
         document.getElementById('grid').appendChild(pixel);
     }
+} 
+
+function changePixelSize(num){
+    let dimensions = 600 / num;
+
+    const pixelList = document.querySelectorAll('.pixel');
+    pixelList.forEach (pixel => {
+        pixel.style.width = dimensions + 'px';
+        pixel.style.height = dimensions + 'px';
+    });
 }
+
+function getSize(){
+    let gridSize = prompt('Please enter size of grid:', 16);
+    addPixels(gridSize);
+    changePixelSize(gridSize);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     function paint(){
@@ -53,7 +85,7 @@ function addPixels(){
 
     
 
-selectCreate.addEventListener('click', addPixels);
+selectSize.addEventListener('click', getSize);
 selectPaint.addEventListener('click', paint);
 selectReset.addEventListener('click', reset);
 selectBlue.addEventListener('click', blue);
