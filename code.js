@@ -27,9 +27,15 @@ function changePixelSize(num){
 }
 
 function getSize(){
-    let gridSize = prompt('Please enter size of grid:', 16);
-    addPixels(gridSize);
-    changePixelSize(gridSize);
+    let gridSize = prompt('Please enter size of grid (Max 100):', 16);
+
+    if(gridSize <= 100){
+        addPixels(gridSize);
+        changePixelSize(gridSize);
+    } else if(gridSize > 100){
+        addPixels(100);
+        changePixelSize(100);
+    }
 }
 
 
