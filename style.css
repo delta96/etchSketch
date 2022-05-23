@@ -25,12 +25,36 @@
     border-color: red;
     border-radius: 20px;
 }
+
+#dial1, #dial2 {
+    border-color: white;
+    border-style: solid;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+}
+
+#dial1 {
+    margin-right: auto;
+}
+
+#dial2 {
+    margin-left: auto;
+}
+
+button {
+    height: 30px;
+}
+
 #navBar {
     display: flex;
+    width: 90%;
     border-style: solid;
     gap: 15px;
     justify-content: center;
-    margin: 35px;
+    margin: 25px;
+    align-items: center;
 }
 
 #grid {
