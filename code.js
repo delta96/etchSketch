@@ -14,6 +14,7 @@ function addPixels(num){
         pixel.classList.add('pixel');
         document.getElementById('grid').appendChild(pixel);
     }
+
 } 
 
 function changePixelSize(num){
@@ -26,6 +27,16 @@ function changePixelSize(num){
     });
 }
 
+function paint(){
+    const squares = document.querySelectorAll('.pixel');
+     squares.forEach (square => {
+ 
+         square.addEventListener('mouseover', function(){
+         square.style.backgroundColor = 'black';
+
+ })});
+ }
+
 function getSize(){
     let gridSize = prompt('Please enter size of grid (Max 100):', 16);
 
@@ -36,6 +47,8 @@ function getSize(){
         addPixels(100);
         changePixelSize(100);
     }
+    paint();
+
 }
 
 
@@ -53,21 +66,13 @@ function getSize(){
 
 
 
-    function paint(){
-       const squares = document.querySelectorAll('.pixel');
-        squares.forEach (square => {
     
-            square.addEventListener('mouseover', function(){
-            square.style.backgroundColor = 'black';
-
-    })});
-    }
 
     function reset(){
        const squares = document.querySelectorAll('.pixel');
         squares.forEach (square => {
 
-            square.style.backgroundColor = 'white';
+            square.style.backgroundColor = 'silver';
         })
     }
 
