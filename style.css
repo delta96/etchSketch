@@ -9,8 +9,28 @@
     align-items: center;
     background-color: white;
     height: 100vh;
-    flex-direction: column;
     justify-content: space-around;
+
+}
+
+#shell {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    width: 700px;
+    height: 750px;
+    background-color: red;
+    border-style: solid;
+    border-color: red;
+    border-radius: 20px;
+}
+#navBar {
+    display: flex;
+    border-style: solid;
+    gap: 15px;
+    justify-content: center;
+    margin: 35px;
 }
 
 #grid {
@@ -18,14 +38,16 @@
     height: 600px;
     display: flex;
     flex-wrap: wrap;
-    border-style: solid;
+    
+    
     justify-content: center;
     align-content: center;
-
+    background-color: silver;
 }
 
 .pixel {
     width: 6px;
     height: 6px;
+    
 }
 
