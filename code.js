@@ -1,7 +1,7 @@
 
 const selectPaint = document.querySelector('#start');
 const selectReset = document.querySelector('#reset');
-const selectBlue = document.querySelector('#blue');
+const selectColor = document.querySelector('#color');
 const selectRed = document.querySelector('#red');
 const sketchPad = document.querySelector('#grid');
 const selectSize = document.querySelector('#size');
@@ -37,6 +37,14 @@ function paint(){
  })});
  }
 
+ function disableButtons() { // Function to disable buttons to simulate the end of the game
+    selectSize.disabled = true;
+} 
+
+function refresh() {
+    selectSize.innerHTML = 'Refresh!';
+}
+
 function getSize(){
     let gridSize = prompt('Please enter size of grid (Max 100):', 16);
 
@@ -48,6 +56,8 @@ function getSize(){
         changePixelSize(100);
     }
     paint();
+    disableButtons();
+    refresh();
 
 }
 
@@ -76,7 +86,7 @@ function getSize(){
         })
     }
 
-    function blue(){
+    function color(){
        const squares = document.querySelectorAll('.pixel');
         squares.forEach (square => {
 
@@ -85,19 +95,10 @@ function getSize(){
         })});
     }
 
-    function red(){
-        const squares = document.querySelectorAll('.pixel');
-        squares.forEach (square => {
-
-            square.addEventListener('mouseover', function(){
-            square.style.backgroundColor = 'red';
-        })});
-    }
 
     
 
 selectSize.addEventListener('click', getSize);
 selectPaint.addEventListener('click', paint);
 selectReset.addEventListener('click', reset);
-selectBlue.addEventListener('click', blue);
-selectRed.addEventListener('click', red);
+selectColor.addEventListener('click', );

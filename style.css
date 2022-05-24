@@ -30,7 +30,7 @@
 #dial1, #dial2 {
     border-color: black;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 50%;
     width: 70px;
     height: 70px;
@@ -47,6 +47,8 @@
 
 button {
     height: 30px;
+    width: 70px;
+    border-radius: 15px;
 }
 
 #navBar {
@@ -63,18 +65,17 @@ button {
     height: 600px;
     display: flex;
     flex-wrap: wrap;
-    border-radius: 20px;
     border-color: black;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     justify-content: center;
     align-content: center;
     background-color: silver;
 }
 
 .pixel {
-    width: 6px;
-    height: 6px;
+    width: 0px;
+    height: 0px;
     
 }
 
